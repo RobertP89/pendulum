@@ -301,12 +301,33 @@ vpaRC = vpa(RouthColumn, 3);
 %pidTuner(G_ac, 'pid');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Ka_i = 0;
+Ka_i2 = 0;
+Ka_i = 40000; % 40000
+Ka_d = 40; % 40
+Ka_p = 12000; % 12000
+again = 0.002775; % 0.004, 0.0027
 Kx_i = 0;
-my_Gx = G_xLQR + tf(Kx_i, [1 0]);
-my_Ga = G_aLQR + tf(Ka_i, [1 0]);
-again = 1;
+my_Gx = tf(0, 1); %G_xLQR + tf(Kx_i, [1 0]);
+
+zero1 =  2.5; % 3.371, 2.5
+zero2 = 400; % 300, 400
+mygain =  1.2* 0.108; % 0.108
+
+my_Ga = mygain * tf([1 zero1+zero2 zero1*zero2], [1 0]);
+%my_Ga = again * tf([Ka_d Ka_p Ka_i], [1 0]);
+Gcomp = my_Ga * G_v2a;
 xgain = 1;
+
+
+figure(1);
+rlocus(G_v2a);
+title("Voltage-Angle Root Locus");
+figure(2);
+rlocus(my_Ga * G_v2a);
+title("Compensated Voltage-Angle Root Locus");
+
+
+
 %%%% Controller Variables for Simulink TF Implementation %%%%%%%%
 [ua_num, ua_den] = tfdata(my_Ga, 'v');
 
@@ -315,38 +336,57 @@ ua_long_num = zeros(1, 11);
 for i = 1:length(ua_num)
     ua_long_num(i) = ua_num(length(ua_num) - i + 1);
 end
+Avec = zeros(1,11);
+Avec = ua_long_num;
 
-Avec1 = ua_long_num(1);
-Avec2 = ua_long_num(2);
-Avec3 = ua_long_num(3);
-Avec4 = ua_long_num(4);
-Avec5 = ua_long_num(5);
-Avec6 = ua_long_num(6);
-Avec7 = ua_long_num(7);
-Avec8 = ua_long_num(8);
-Avec9 = ua_long_num(9);
-Avec10 = ua_long_num(10);
-Avec11 = ua_long_num(11);
+
+
+
+
+
 
 ua_long_den = zeros(1, 11);
 
+ua_den_FIRST_INDEX = 0;
+
 for i = 1:length(ua_den)
-    ua_long_den(i) = ua_den(length(ua_den) - i + 1);
+    if ua_den(i) ~= 0
+        ua_den_FIRST_INDEX = i;
+        break
+    end
 end
 
 
-Bvec1 = ua_long_den(1);
-Bvec2 = ua_long_den(2);
-Bvec3 = ua_long_den(3);
-Bvec4 = ua_long_den(4);
-Bvec5 = ua_long_den(5);
-Bvec6 = ua_long_den(6);
-Bvec7 = ua_long_den(7);
-Bvec8 = ua_long_den(8);
-Bvec9 = ua_long_den(9);
-Bvec10 = ua_long_den(10);
-Bvec11 = ua_long_den(11);
+for i = 1:length(ua_den)
+    ua_long_den(i) = ua_den(length(ua_den) - (i-1));
+end
 
+last_nonzero_index = 0;
+
+for i  = length(ua_long_den):-1:1
+    if ua_long_den(i) ~= 0
+        last_nonzero_index = i;
+        break;
+    end
+end
+Bvec = zeros(1, 11);
+
+for i = 1:last_nonzero_index - 1
+    Bvec(i) = ua_long_den(i);
+end
+
+mi_den = zeros(1, last_nonzero_index);
+mi_den(1) = 1;
+invb0 = 0;
+
+for i = 1:length(ua_den)
+    if ua_den(i) ~= 0
+        invb0 = 1 / ua_den(i);
+        break
+    end
+end
+
+multiple_integral = tf(1, mi_den);
 [ux_num, ux_den] = tfdata(my_Gx, 'v');
 
 ux_long_num = zeros(1, 11);
@@ -389,4 +429,5 @@ w_cut = 2*pi*5;
 damping_ratio = 0.9;
 
 derivative_filter = tf([w_cut * w_cut 0], [1 2*w_cut*damping_ratio w_cut*w_cut]);
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
