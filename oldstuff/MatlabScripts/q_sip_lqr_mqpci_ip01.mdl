@@ -1,0 +1,1700 @@
+Model {
+  Name			  "q_sip_lqr_mqpci_ip01"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Jul 31 14:07:54 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "herve"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Mar 14 15:53:12 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:406>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "9999"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode4"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.001"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "external"
+  RTWSystemTargetFile	  "wincon.tlc"
+  RTWOptions		  " -aAllParameters=1 -aAllSignals=1 -aEnforceIntegerD"
+"owncast=0 -aExtMode=1 -aFoldNonRolledExpr=0 -aForceParamTrailComments=0 -aGen"
+"erateComments=1 -aIncHierarchyInIds=0 -aInlineInvariantSignals=0 -aInlinePara"
+"meters=0 -aLocalBlockOutputs=0 -aRTWVerbose=1 -aRollThreshold=5 -aShowElimina"
+"tedStatements=1"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "nt_msvc.tmf"
+  RTWMakeCommand	  "make_wc"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "wc_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  off
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "q_sip_lqr_mqpci_ip01"
+    Location		    [308, 219, 1230, 781]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Gain
+      Name		      "(/m)1"
+      Position		      [395, 257, 450, 293]
+      ShowName		      off
+      Gain		      " K"
+      Multiplication	      "Matrix(K*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "(/m)2"
+      Position		      [400, 427, 455, 463]
+      ShowName		      off
+      Gain		      " K"
+      Multiplication	      "Matrix(K*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [4, 1]
+      Position		      [710, 212, 715, 338]
+      ShowName		      off
+      Inputs		      "4"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SignalGenerator
+      Name		      "Position\nSetpoint"
+      Position		      [40, 259, 70, 291]
+      WaveForm		      "square"
+      Amplitude		      "1"
+      Frequency		      "0.2"
+      Units		      "Hertz"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "SIP + IP01:\nActual Plant"
+      Ports		      [1, 4]
+      Position		      [540, 216, 690, 334]
+      ForegroundColor	      "red"
+      BackgroundColor	      "lightBlue"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"SIP + IP01:\nActual Plant"
+	Location		[464, 220, 1154, 720]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Vm (V)"
+	  Position		  [45, 238, 75, 252]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Cart Pendulum Angle Watchdog"
+	  Ports			  [1, 0, 1]
+	  Position		  [425, 105, 525, 165]
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  on
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "Cart Pendulum Angle Watchdog"
+	    Location		    [528, 222, 1192, 741]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "automatic"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alpha (rd)"
+	      Position		      [45, 233, 75, 247]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      Ports		      []
+	      Position		      [70, 30, 90, 50]
+	      StatesWhenEnabling      "held"
+	      ShowOutputPort	      off
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Check Maximum\nAllowed Angle"
+	      Position		      [280, 68, 320, 212]
+	      Operator		      "<"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Check Minimum\nAllowed Angle"
+	      Position		      [280, 268, 320, 412]
+	      Operator		      "<"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Radians\nto Degrees"
+	      Ports		      [1, 1]
+	      Position		      [125, 225, 155, 255]
+	      SourceBlock	      "simulink_extras/Transformations/Radians"
+"\nto Degrees"
+	      SourceType	      "RadiansToDegrees"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Stop With Error:\nMinimum Angle Reached"
+"."
+	      Ports		      [1]
+	      Position		      [435, 317, 485, 363]
+	      SourceBlock	      "qctools/Extra\nSinks/Stop With Error"
+	      SourceType	      "Stop With Error"
+	      errMsg		      "Minimum Angle Limit Reached."
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Stop With Error: \nMaximum Angle Reache"
+"d."
+	      Ports		      [1]
+	      Position		      [425, 117, 475, 163]
+	      SourceBlock	      "qctools/Extra\nSinks/Stop With Error"
+	      SourceType	      "Stop With Error"
+	      errMsg		      "Maximum Angle Limit Reached."
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "X MAX"
+	      Position		      [145, 88, 215, 122]
+	      ShowName		      off
+	      Value		      "ALPHA_MAX"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "X MIN"
+	      Position		      [155, 359, 225, 391]
+	      ShowName		      off
+	      Value		      "ALPHA_MIN"
+	      VectorParams1D	      on
+	    }
+	    Line {
+	      SrcBlock		      "X MAX"
+	      SrcPort		      1
+	      DstBlock		      "Check Maximum\nAllowed Angle"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Check Minimum\nAllowed Angle"
+	      SrcPort		      1
+	      DstBlock		      "Stop With Error:\nMinimum Angle Reached"
+"."
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "X MIN"
+	      SrcPort		      1
+	      DstBlock		      "Check Minimum\nAllowed Angle"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "alpha (rd)"
+	      SrcPort		      1
+	      DstBlock		      "Radians\nto Degrees"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Check Maximum\nAllowed Angle"
+	      SrcPort		      1
+	      DstBlock		      "Stop With Error: \nMaximum Angle Reache"
+"d."
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Radians\nto Degrees"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		Points			[0, -65]
+		DstBlock		"Check Maximum\nAllowed Angle"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"Check Minimum\nAllowed Angle"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [419, 60, 531, 85]
+	  Orientation		  "down"
+	  ShowName		  off
+	  Value			  "ALPHA_LIM_ENABLE"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Derivative Filter1"
+	  Position		  [415, 261, 530, 309]
+	  Numerator		  "[wcf^2 0]"
+	  Denominator		  "[1 2*zetaf*wcf wcf^2]"
+	  AbsoluteTolerance	  "auto"
+	  Realization		  "auto"
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Derivative Filter2"
+	  Position		  [350, 401, 465, 449]
+	  Numerator		  "[wcf^2 0]"
+	  Denominator		  "[1 2*zetaf*wcf wcf^2]"
+	  AbsoluteTolerance	  "auto"
+	  Realization		  "auto"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IP01 - MQPCI"
+	  Ports			  [1, 2]
+	  Position		  [130, 186, 275, 299]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "lightBlue"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "IP01 - MQPCI"
+	    Location		    [204, 122, 1138, 867]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vm (V)"
+	      Position		      [55, 153, 85, 167]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Analog Inputs #0 and #1:\nCart and Pend"
+"ulum \nPotentiometer Inputs"
+	      Ports		      [0, 1]
+	      Position		      [15, 519, 120, 591]
+	      SourceBlock	      "qctools/Quanser Consulting\nMultiQ-PCI "
+"Series/Analog Input"
+	      SourceType	      "Analog Input"
+	      boardNumber	      "0"
+	      channels		      "[0 1]"
+	      ranges		      "[5 5]"
+	      sampleTime	      "simget(bdroot,'FixedStep')"
+	      simulationInput	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Analog Output #0:\nTo UPM Driving the M"
+"otor\n"
+	      Ports		      [1]
+	      Position		      [695, 149, 800, 221]
+	      SourceBlock	      "qctools/Quanser Consulting\nMultiQ-PCI "
+"Series/Analog Output"
+	      SourceType	      "Analog Output"
+	      boardNumber	      "0"
+	      channels		      "0"
+	      initialOutputs	      "0"
+	      finalOutputs	      "0"
+	      sampleTime	      "-1"
+	      simulationOutput	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Bias Removal"
+	      Ports		      [2, 1]
+	      Position		      [190, 508, 275, 572]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      on
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      System {
+		Name			"Bias Removal"
+		Location		[407, 318, 910, 684]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"automatic"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Time"
+		  Position		  [95, 218, 125, 232]
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V"
+		  Position		  [60, 263, 90, 277]
+		  Port			  "2"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Memory
+		  Name			  "Memory:\nVbias"
+		  Position		  [185, 80, 215, 110]
+		  Orientation		  "left"
+		  X0			  "0"
+		  InheritSampleTime	  off
+		  RTWStateStorageClass	  "Auto"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [290, 215, 310, 235]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|-+"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Threshold: 0.1s"
+		  Position		  [180, 159, 225, 291]
+		  Threshold		  "0.1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "V-Vbias"
+		  Position		  [355, 218, 385, 232]
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "V"
+		  SrcPort		  1
+		  Points		  [0, 0; 20, 0]
+		  Branch {
+		    DstBlock		    "Threshold: 0.1s"
+		    DstPort		    3
+		  }
+		  Branch {
+		    Points		    [0, 70; 185, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Memory:\nVbias"
+		  SrcPort		  1
+		  Points		  [-55, 0; 0, 85]
+		  DstBlock		  "Threshold: 0.1s"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Threshold: 0.1s"
+		  SrcPort		  1
+		  Points		  [0, 0; 25, 0]
+		  Branch {
+		    Points		    [0, -130]
+		    DstBlock		    "Memory:\nVbias"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "V-Vbias"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Time"
+		  SrcPort		  1
+		  DstBlock		  "Threshold: 0.1s"
+		  DstPort		  2
+		}
+		Annotation {
+		  Position		  [194, 39]
+		  Text			  "Initial Bias Removal"
+		  FontName		  "Arial"
+		  FontSize		  16
+		  FontWeight		  "bold"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Cable Gain\nPre-Compensation"
+	      Position		      [380, 157, 475, 213]
+	      Gain		      " 1 / K_CABLE"
+	      Multiplication	      "Element-wise(K.*u)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Cart Position Watchdog"
+	      Ports		      [1, 0, 1]
+	      Position		      [495, 330, 595, 390]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      on
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      System {
+		Name			"Cart Position Watchdog"
+		Location		[61, 399, 725, 918]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"automatic"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "x (m)"
+		  Position		  [45, 233, 75, 247]
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  EnablePort
+		  Name			  "Enable"
+		  Ports			  []
+		  Position		  [70, 30, 90, 50]
+		  StatesWhenEnabling	  "held"
+		  ShowOutputPort	  off
+		}
+		Block {
+		  BlockType		  RelationalOperator
+		  Name			  "Check Maximum\nAllowed Position"
+		  Position		  [280, 68, 320, 212]
+		  Operator		  "<"
+		}
+		Block {
+		  BlockType		  RelationalOperator
+		  Name			  "Check Minimum\nAllowed Position"
+		  Position		  [280, 268, 320, 412]
+		  Operator		  "<"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Stop With Error:\nMinimum Limit Rea"
+"ched."
+		  Ports			  [1]
+		  Position		  [435, 317, 485, 363]
+		  SourceBlock		  "qctools/Extra\nSinks/Stop With Erro"
+"r"
+		  SourceType		  "Stop With Error"
+		  errMsg		  "Minimum Position Limit reached."
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Stop With Error: \nMaximum Limit Re"
+"ached."
+		  Ports			  [1]
+		  Position		  [425, 117, 475, 163]
+		  SourceBlock		  "qctools/Extra\nSinks/Stop With Erro"
+"r"
+		  SourceType		  "Stop With Error"
+		  errMsg		  "Maximum Position Limit reached."
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "X MAX"
+		  Position		  [150, 90, 200, 120]
+		  Value			  "X_MAX"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "X MIN"
+		  Position		  [165, 360, 215, 390]
+		  Value			  "X_MIN"
+		  VectorParams1D	  on
+		}
+		Line {
+		  SrcBlock		  "X MAX"
+		  SrcPort		  1
+		  DstBlock		  "Check Maximum\nAllowed Position"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Check Minimum\nAllowed Position"
+		  SrcPort		  1
+		  DstBlock		  "Stop With Error:\nMinimum Limit Rea"
+"ched."
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "X MIN"
+		  SrcPort		  1
+		  DstBlock		  "Check Minimum\nAllowed Position"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "x (m)"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  Branch {
+		    Points		    [0, -65]
+		    DstBlock		    "Check Maximum\nAllowed Position"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 65]
+		    DstBlock		    "Check Minimum\nAllowed Position"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Check Maximum\nAllowed Position"
+		  SrcPort		  1
+		  DstBlock		  "Stop With Error: \nMaximum Limit Re"
+"ached."
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [501, 285, 589, 310]
+	      Orientation	      "down"
+	      ShowName		      off
+	      Value		      "X_LIM_ENABLE"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Conversion to m"
+	      Position		      [365, 417, 415, 463]
+	      Gain		      " K_PC"
+	      Multiplication	      "Element-wise(K.*u)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Conversion to rd"
+	      Position		      [465, 614, 520, 656]
+	      Gain		      " K_PP"
+	      Multiplication	      "Element-wise(K.*u)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "DAC Limit"
+	      Position		      [520, 170, 555, 200]
+	      UpperLimit	      "VMAX_DAC"
+	      LowerLimit	      "- VMAX_DAC"
+	      LinearizeAsGain	      on
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 2]
+	      Position		      [315, 344, 325, 731]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "2"
+	      BusSelectionMode	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Radians\nto Degrees"
+	      Ports		      [1, 1]
+	      Position		      [695, 525, 725, 555]
+	      SourceBlock	      "simulink_extras/Transformations/Radians"
+"\nto Degrees"
+	      SourceType	      "RadiansToDegrees"
+	    }
+	    Block {
+	      BlockType		      Clock
+	      Name		      "Sim Time"
+	      Position		      [90, 335, 110, 355]
+	      DisplayTime	      off
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Threshold: 0.1s"
+	      Position		      [310, 147, 335, 223]
+	      Threshold		      "0.1"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "V Command (V)"
+	      Ports		      [1]
+	      Position		      [635, 80, 665, 110]
+	      Floating		      off
+	      Location		      [112, 160, 443, 474]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      TickLabels	      "on"
+	      ZoomMode		      "on"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      Grid		      "on"
+	      TimeRange		      "1.000000"
+	      YMin		      "-1"
+	      YMax		      "1"
+	      SaveToWorkspace	      off
+	      SaveName		      "ScopeData3"
+	      DataFormat	      "Array"
+	      LimitDataPoints	      on
+	      MaxDataPoints	      "5000"
+	      Decimation	      "1"
+	      SampleInput	      off
+	      SampleTime	      "0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Vm = 0"
+	      Position		      [205, 230, 235, 260]
+	      Value		      "0"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "alpha (deg)"
+	      Ports		      [1]
+	      Position		      [750, 525, 840, 555]
+	      Format		      "short"
+	      Decimation	      "1"
+	      Floating		      off
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "m to mm"
+	      Position		      [675, 337, 725, 373]
+	      Gain		      " 1e3"
+	      Multiplication	      "Element-wise(K.*u)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "x_meas (mm)"
+	      Ports		      [1]
+	      Position		      [745, 340, 835, 370]
+	      Format		      "short"
+	      Decimation	      "1"
+	      Floating		      off
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "alpha (rd)"
+	      Position		      [830, 628, 860, 642]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x (m)"
+	      Position		      [835, 433, 865, 447]
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Conversion to m"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Conversion to rd"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Analog Inputs #0 and #1:\nCart and Pend"
+"ulum \nPotentiometer Inputs"
+	      SrcPort		      1
+	      DstBlock		      "Bias Removal"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "DAC Limit"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[0, -90]
+		DstBlock		"V Command (V)"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Analog Output #0:\nTo UPM Driving the"
+" Motor\n"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Cart Position Watchdog"
+	      DstPort		      enable
+	    }
+	    Line {
+	      SrcBlock		      "Conversion to rd"
+	      SrcPort		      1
+	      Points		      [135, 0]
+	      Branch {
+		DstBlock		"alpha (rd)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -95]
+		DstBlock		"Radians\nto Degrees"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Radians\nto Degrees"
+	      SrcPort		      1
+	      DstBlock		      "alpha (deg)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "m to mm"
+	      SrcPort		      1
+	      DstBlock		      "x_meas (mm)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Cable Gain\nPre-Compensation"
+	      SrcPort		      1
+	      DstBlock		      "DAC Limit"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Conversion to m"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[200, 0]
+		Branch {
+		  Points		  [0, -85]
+		  DstBlock		  "m to mm"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "x (m)"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, -80]
+		DstBlock		"Cart Position Watchdog"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Bias Removal"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sim Time"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		Points			[0, -160]
+		DstBlock		"Threshold: 0.1s"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 180]
+		DstBlock		"Bias Removal"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Vm = 0"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -35]
+	      DstBlock		      "Threshold: 0.1s"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Vm (V)"
+	      SrcPort		      1
+	      DstBlock		      "Threshold: 0.1s"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Threshold: 0.1s"
+	      SrcPort		      1
+	      DstBlock		      "Cable Gain\nPre-Compensation"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Position		      [852, 415]
+	      Text		      "Cart Position"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	    Annotation {
+	      Position		      [847, 609]
+	      Text		      "Cart Pendulum Angle"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	    Annotation {
+	      Position		      [429, 39]
+	      Text		      "Interface to the IP01 Plant"
+	      FontName		      "Arial"
+	      FontSize		      16
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "xc (m)"
+	  Position		  [505, 353, 535, 367]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "alpha (rd)"
+	  Position		  [575, 208, 605, 222]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "xc_dot (m/s)"
+	  Position		  [510, 418, 540, 432]
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "alpha_dot (rd/s)"
+	  Position		  [580, 278, 610, 292]
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Vm (V)"
+	  SrcPort		  1
+	  DstBlock		  "IP01 - MQPCI"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IP01 - MQPCI"
+	  SrcPort		  2
+	  Points		  [35, 0; 0, 90]
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Derivative Filter2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "xc (m)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "IP01 - MQPCI"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  Branch {
+	    Points		    [0, 70]
+	    DstBlock		    "Derivative Filter1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    Branch {
+	      DstBlock		      "alpha (rd)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -80]
+	      DstBlock		      "Cart Pendulum Angle Watchdog"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Derivative Filter2"
+	  SrcPort		  1
+	  DstBlock		  "xc_dot (m/s)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Derivative Filter1"
+	  SrcPort		  1
+	  DstBlock		  "alpha_dot (rd/s)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Cart Pendulum Angle Watchdog"
+	  DstPort		  enable
+	}
+	Annotation {
+	  Position		  [164, 59]
+	  Text			  "Interface to the Actual\nSIP + IP01 System"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "SIP + IP01_2:\nState-Space Model"
+      Position		      [625, 423, 690, 467]
+      A			      "A"
+      B			      "B"
+      C			      "C"
+      D			      "D"
+      X0		      "0"
+      AbsoluteTolerance	      "auto"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Scopes"
+      Ports		      [3]
+      Position		      [795, 105, 845, 195]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Scopes"
+	Location		[565, 83, 1244, 543]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X_des"
+	  Position		  [145, 78, 175, 92]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X_meas"
+	  Position		  [30, 128, 60, 142]
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X_sim"
+	  Position		  [155, 263, 185, 277]
+	  Port			  "3"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Cart Position (mm)"
+	  Ports			  [1]
+	  Position		  [600, 120, 630, 150]
+	  Floating		  off
+	  Location		  [11, 123, 788, 655]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  TickLabels		  "on"
+	  ZoomMode		  "on"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  Grid			  "on"
+	  TimeRange		  "1.000000"
+	  YMin			  "-250"
+	  YMax			  "250"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "Array"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [3, 1]
+	  Position		  [390, 63, 395, 207]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [2, 1]
+	  Position		  [425, 338, 430, 422]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Pend Angle (deg)"
+	  Ports			  [1]
+	  Position		  [565, 365, 595, 395]
+	  Floating		  off
+	  Location		  [498, 392, 1275, 924]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  TickLabels		  "on"
+	  ZoomMode		  "on"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  Grid			  "on"
+	  TimeRange		  "1.000000"
+	  YMin			  "-250"
+	  YMax			  "250"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  DataFormat		  "Array"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees"
+	  Ports			  [1, 1]
+	  Position		  [475, 365, 505, 395]
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto"
+" Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "[ 1; 1; 0; 0 ]1"
+	  Position		  [115, 113, 210, 157]
+	  ShowName		  off
+	  Gain			  " [1 0 0 0]"
+	  Multiplication	  "Matrix(K*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "[ 1; 1; 0; 0 ]2"
+	  Position		  [110, 338, 205, 382]
+	  ShowName		  off
+	  Gain			  " [0 1 0 0]"
+	  Multiplication	  "Matrix(K*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "[ 1; 1; 0; 0 ]3"
+	  Position		  [250, 163, 345, 207]
+	  ShowName		  off
+	  Gain			  " [1 0 0 0]"
+	  Multiplication	  "Matrix(K*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "[ 1; 1; 0; 0 ]4"
+	  Position		  [250, 378, 345, 422]
+	  ShowName		  off
+	  Gain			  " [0 1 0 0]"
+	  Multiplication	  "Matrix(K*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "[ 1; 1; 0; 0 ]5"
+	  Position		  [210, 63, 305, 107]
+	  ShowName		  off
+	  Gain			  " [1 0 0 0]"
+	  Multiplication	  "Matrix(K*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "m To mm"
+	  Position		  [485, 118, 525, 152]
+	  Gain			  " 1e3"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "m To mm"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "m To mm"
+	  SrcPort		  1
+	  DstBlock		  "Cart Position (mm)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "[ 1; 1; 0; 0 ]1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "X_des"
+	  SrcPort		  1
+	  DstBlock		  "[ 1; 1; 0; 0 ]5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X_meas"
+	  SrcPort		  1
+	  Points		  [0, 0; 15, 0]
+	  Branch {
+	    DstBlock		    "[ 1; 1; 0; 0 ]1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 225]
+	    DstBlock		    "[ 1; 1; 0; 0 ]2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Radians\nto Degrees"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees"
+	  SrcPort		  1
+	  DstBlock		  "Pend Angle (deg)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X_sim"
+	  SrcPort		  1
+	  Points		  [0, 0; 35, 0]
+	  Branch {
+	    Points		    [0, -85]
+	    DstBlock		    "[ 1; 1; 0; 0 ]3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 130]
+	    DstBlock		    "[ 1; 1; 0; 0 ]4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "[ 1; 1; 0; 0 ]3"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "[ 1; 1; 0; 0 ]5"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "[ 1; 1; 0; 0 ]2"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "[ 1; 1; 0; 0 ]4"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Annotation {
+	  Position		  [353, 123]
+	  Text			  "xc_meas"
+	  FontName		  "Arial"
+	}
+	Annotation {
+	  Position		  [162, 167]
+	  Text			  "State Selection"
+	}
+	Annotation {
+	  Position		  [378, 348]
+	  Text			  "alpha_meas"
+	  FontName		  "Arial"
+	}
+	Annotation {
+	  Position		  [378, 393]
+	  Text			  "alpha_sim"
+	  FontName		  "Arial"
+	}
+	Annotation {
+	  Position		  [363, 173]
+	  Text			  "xc_sim"
+	  FontName		  "Arial"
+	}
+	Annotation {
+	  Position		  [358, 78]
+	  Text			  "xc_d"
+	  FontName		  "Arial"
+	}
+	Annotation {
+	  Position		  [84, 29]
+	  Text			  "Scopes"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Setpoint\nAmplitude (m)"
+      Position		      [105, 253, 155, 297]
+      Gain		      " 20e-3"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [320, 260, 350, 290]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1]
+      Position		      [315, 430, 345, 460]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Saturate
+      Name		      "UPM Voltage\nLimit"
+      Position		      [475, 260, 505, 290]
+      UpperLimit	      "VMAX_UPM"
+      LowerLimit	      "- VMAX_UPM"
+      LinearizeAsGain	      on
+    }
+    Block {
+      BlockType		      Saturate
+      Name		      "UPM Voltage\nSaturation"
+      Position		      [500, 430, 530, 460]
+      UpperLimit	      "VMAX_UPM"
+      LowerLimit	      "- VMAX_UPM"
+      LinearizeAsGain	      on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "[ 1; 1; 0; 0 ]"
+      Position		      [180, 249, 260, 301]
+      ShowName		      off
+      Gain		      " [1; 0; 0; 0]"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Line {
+      SrcBlock		      "UPM Voltage\nLimit"
+      SrcPort		      1
+      DstBlock		      "SIP + IP01:\nActual Plant"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "SIP + IP01:\nActual Plant"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "(/m)1"
+      SrcPort		      1
+      DstBlock		      "UPM Voltage\nLimit"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "SIP + IP01:\nActual Plant"
+      SrcPort		      2
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "SIP + IP01:\nActual Plant"
+      SrcPort		      4
+      DstBlock		      "Mux1"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "UPM Voltage\nSaturation"
+      SrcPort		      1
+      DstBlock		      "SIP + IP01_2:\nState-Space Model"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "(/m)2"
+      SrcPort		      1
+      DstBlock		      "UPM Voltage\nSaturation"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "(/m)2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "(/m)1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "[ 1; 1; 0; 0 ]"
+      SrcPort		      1
+      Points		      [5, 0; 15, 0]
+      Branch {
+	DstBlock		"Sum1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 170]
+	DstBlock		"Sum2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -155]
+	DstBlock		"Scopes"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	Points			[0, 105; -400, 0]
+	DstBlock		"Sum1"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -125]
+	DstBlock		"Scopes"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "SIP + IP01_2:\nState-Space Model"
+      SrcPort		      1
+      Points		      [0, 0; 60, 0]
+      Branch {
+	Points			[0, 90; -425, 0]
+	DstBlock		"Sum2"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -265]
+	DstBlock		"Scopes"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Setpoint\nAmplitude (m)"
+      SrcPort		      1
+      DstBlock		      "[ 1; 1; 0; 0 ]"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "SIP + IP01:\nActual Plant"
+      SrcPort		      3
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Position\nSetpoint"
+      SrcPort		      1
+      DstBlock		      "Setpoint\nAmplitude (m)"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [189, 44]
+      Text		      "SIP-plus-IP01 System: LQR Closed-Loop\nExperime"
+"nt vs. State-Space Simulation"
+      FontName		      "Arial"
+      FontSize		      16
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [575, 433]
+      Text		      "u=Vm"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [478, 368]
+      Text		      "X = [ xc; alpha; xc_dot; alpha_dot ]"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [367, 433]
+      Text		      "-X"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [372, 263]
+      Text		      "-X"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [210, 314]
+      Text		      "State Selection"
+    }
+    Annotation {
+      Position		      [635, 46]
+      ForegroundColor	      "red"
+      BackgroundColor	      "lightBlue"
+      Text		      "Start the controller with the pendulum held UPR"
+"IGHT."
+      FontSize		      20
+    }
+    Annotation {
+      Position		      [139, 214]
+      Text		      "Position Setpoint (m)"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [483, 528]
+      Text		      "y = X = [ xc; alpha; xc_dot; alpha_dot ]"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+  }
+}
