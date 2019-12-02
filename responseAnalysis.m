@@ -21,6 +21,7 @@ t_xpeak = 0;
 t_xrise = 0;
 
 t_asettle = -1;
+i_asettle = -1;
 t_apeak = 0;
 t_arise1 = -1;
 t_arise2 = -1;
@@ -33,8 +34,8 @@ a_peak = -1;
 p_detect = 10;
 a_detect = 0.01;
 
-
-
+p_absMax = max(abs(p));
+p_settle = 0;
 for i = 1:length(a)
     % Find start of impulse: 
     if abs(a(i)) > abs(a_detect)
@@ -51,8 +52,9 @@ for i = 1:length(a)
         disp("set apeak");
     end
     a_mean = movmean(abs(a),600);
-    if a_peak ~= -1 && abs(a_mean(i)) < 0.02 * abs(a_peak) && t_asettle == -1
+    if a_peak ~= -1 && abs(a_mean(i)) < 0.05 * abs(a_peak) && t_asettle == -1
         t_asettle = t(i);
+        i_asettle = i;
     end
    
      
@@ -82,12 +84,12 @@ for i = 1:length(t)-1
 end
 
 figure(1);
-plot(t, p, 'r-');
+plot(t, p/1000, 'r-');
 xlim([t(1), t(end)]);
-ylim([-1*200 1*200]);
+ylim([-1*10 1*10]);
 title('position vs. time');
 xlabel('time (s)');
-ylabel('position (mm)');
+ylabel('position (m)');
 %save('positionVtime.fig');
 
 amax = abs(max(a));
@@ -99,6 +101,8 @@ title('angle vs. time');
 xlabel('time (s)');
 ylabel('angle (rad)');
 
+
+
 disp("Final angle (rad): ");
 disp(a(end));
 disp("Peak time (s): ");
@@ -109,4 +113,10 @@ disp("Settle time (s): ");
 disp(t_asettle);
 disp("Rise time (s): ");
 disp(t_arise);
+disp("Abs Max x: ");
+disp(p_absMax);
+
+p_settle = p(i_asettle);
+disp("Settled @ x (cm) = ");
+disp(p_settle/10);
 
